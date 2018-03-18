@@ -3,12 +3,12 @@ project (critbit C)
 include_directories (../cutest)
 
 FILE (GLOB LIB_HDR *.h)
-add_library (${PROJECT_NAME} cb_clear.c cb_erase.c cb_find.c cb_find_prefix.c cb_foreach.c cb_get_kv.c cb_insert.c cb_new_kv.c ${LIB_HDR})
+add_library (${PROJECT_NAME} critbit_clear.c critbit_erase.c critbit_find.c critbit_find_prefix.c critbit_foreach.c critbit_get_kv.c critbit_insert.c critbit_new_kv.c ${LIB_HDR})
 
 add_executable (benchmark benchmark.c strtolh.c)
 target_link_libraries (benchmark critbit)
 
-add_executable (test_critbit critbit_tests.c test_critbit.c)
+add_executable (test_critbit cb_tests.c test_critbit.c)
 target_link_libraries (test_critbit critbit cutest)
 
 enable_testing()

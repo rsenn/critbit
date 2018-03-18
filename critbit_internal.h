@@ -12,4 +12,4 @@ struct critbit_node {
 
 int decode_pointer(void ** ptr);
 void from_external_node(void * ptr, void **key, size_t *keylen);
-void * cb_find_top_i(critbit_tree * cb, const void * key, size_t keylen);
+void * critbit_find_top_i(critbit_tree * cb, const void * key, size_t keylen);
