@@ -3,7 +3,7 @@ project (critbit C)
 include_directories (../cutest)
 
 FILE (GLOB LIB_HDR *.h)
-add_library (${PROJECT_NAME} critbit.c ${LIB_HDR})
+add_library (${PROJECT_NAME} cb_clear.c cb_erase.c cb_find.c cb_find_prefix.c cb_foreach.c cb_get_kv.c cb_insert.c cb_new_kv.c ${LIB_HDR})
 
 add_executable (benchmark benchmark.c strtolh.c)
 target_link_libraries (benchmark critbit)
